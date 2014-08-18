@@ -1,0 +1,37 @@
+body{
+    margin:0;
+    font-family:arial, sans-serif;
+    color:#000;
+}
+
+
+#container {
+    position:relative;
+    margin:0;
+}
+#theBlueBox{
+    background-color:#3756ff;
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+#theRedBox {
+    background-color: #ff251e;
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:220px;
+    left:220px;
+}
+
+#theGreenBox{
+    background-color: #0fff13;
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:420px;
+    left:420px;
+}

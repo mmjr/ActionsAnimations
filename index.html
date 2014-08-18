@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing App - Interactions</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+
+    </head>
+    <body>
+        <div id="container" >
+            <div id="theBlueBox"></div>
+            <div id="theRedBox"></div>
+            <div id="theGreenBox"></div>
+        </div>
+        <script type="text/javascript" src="knockout-3.0.0.js"></script>
+        <!--Another Scripts -->
+        <script type="text/javascript" src="gsap/CSSPlugin.min.js"></script>
+        <script type="text/javascript" src="gsap/EasePack.min.js"></script>
+        <script type="text/javascript" src="gsap/TweenLite.min.js"></script>
+
+        <!-- interactions -->
+        <script type="text/javascript" src="interactions/Utils.js"></script>
+        <script type="text/javascript" src="interactions/ActionParams.js"></script>
+        <script type="text/javascript" src="interactions/ActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/ActionHandlersFactory.js"></script>
+        <script type="text/javascript" src="interactions/ActionsGroup.js"></script>
+        <script type="text/javascript" src="interactions/GotoURLActionParams.js"></script>
+        <script type="text/javascript" src="interactions/GotoURLActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/TriggerCTActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/CustInterActionParams.js"></script>
+        <script type="text/javascript" src="interactions/CustInterActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/URLActionsGroup.js"></script>
+        <script type="text/javascript" src="interactions/VideoPlayActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/VideoStopActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/VideoPauseActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/VideoReplayActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/VideoMuteActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/VideoUnmuteActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/VideoActionsGroup.js"></script>
+        <script type="text/javascript" src="interactions/ExpandActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/CollapseActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/ExpandableActionsGroup.js"></script>
+        <script type="text/javascript" src="interactions/FadeActionParams.js"></script>
+        <script type="text/javascript" src="interactions/ShowHideActionParams.js"></script>
+        <script type="text/javascript" src="interactions/MotionActionParams.js"></script>
+        <script type="text/javascript" src="interactions/RotateActionParams.js"></script>
+        <script type="text/javascript" src="interactions/ScaleActionParams.js"></script>
+        <script type="text/javascript" src="interactions/AnimActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/FadeInActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/FadeOutActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/ShowActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/HideActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/MotionActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/SlideInActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/SlideOutActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/ScaleActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/RotateActionHandler.js"></script>
+        <script type="text/javascript" src="interactions/AnimationActionsGroup.js"></script>
+        <script type="text/javascript" src="interactions/Action.js"></script>
+        <script type="text/javascript" src="interactions/Interaction.js"></script>
+        <script type="text/javascript" src="interactions/BindableAction.js"></script>
+        <script type="text/javascript" src="interactions/BindableInteraction.js"></script>
+        <script>
+
+
+                var interaction = BindableInteraction.createFromJSON({
+                    eventId: 'click',
+                    actions: [
+                        {
+                            actionId:'animation.rotate',
+                            actionParams: {
+                                degree: 180,
+                                direction: 1,
+                                duration: 2000,
+                                delay:0,
+                                ease: 'none',
+                                easePower: 1
+                            },
+                            actionTarget: 'theBlueBox'
+                        },
+                        {
+                            actionId:'animation.rotate',
+                            actionParams: {
+                                degree: 180,
+                                direction: -1,
+                                duration: 2000,
+                                delay:2000,
+                                ease: 'none',
+                                easePower: 1
+                            },
+                            actionTarget: 'theRedBox'
+                        },
+                        {
+                            actionId:'animation.rotate',
+                            actionParams: {
+                                degree: 180,
+                                direction: 1,
+                                duration: 2000,
+                                delay:4000,
+                                ease: 'none',
+                                easePower: 1
+                            },
+                            actionTarget: 'theGreenBox'
+                        }
+                    ]
+                });
+                interaction.init();
+                interaction.attach('theBlueBox');
+                interaction.prepare();
+              //  interaction.play();
+
+        </script>
+    </body>
+</html>

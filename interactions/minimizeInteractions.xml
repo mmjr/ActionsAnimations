@@ -1,0 +1,43 @@
+﻿<root>
+  <output path="interactionsPreviewServingInc.js">
+    <input path="../../PreviewServingUtils.js"/>
+    <input path="ActionParams.js"/>
+    <input path="ActionHandler.js"/>
+    <input path="ActionHandlersFactory.js"/>
+    <input path="ActionsGroup.js"/>    
+    <input path="GotoURLActionParams.js"/>
+    <input path="GotoURLActionHandler.js"/>
+    <input path="TriggerCTActionHandler.js"/>
+    <input path="CustInterActionParams.js"/>
+    <input path="CustInterActionHandler.js"/>
+    <input path="URLActionsGroup.js"/>
+    <input path="VideoPlayActionHandler.js"/>
+    <input path="VideoStopActionHandler.js"/>
+    <input path="VideoPauseActionHandler.js"/>
+    <input path="VideoReplayActionHandler.js"/>
+    <input path="VideoMuteActionHandler.js"/>
+    <input path="VideoUnmuteActionHandler.js"/>
+    <input path="VideoActionsGroup.js"/>
+    <input path="ExpandActionHandler.js"/>
+    <input path="CollapseActionHandler.js"/>
+    <input path="ExpandableActionsGroup.js"/>
+    <input path="FadeActionParams.js"/>
+    <input path="ShowHideActionParams.js"/>
+    <input path="MotionActionParams.js"/>
+    <input path="RotateActionParams.js"/>
+    <input path="ScaleActionParams.js"/>
+    <input path="AnimActionHandler.js"/>
+    <input path="FadeInActionHandler.js"/>
+    <input path="FadeOutActionHandler.js"/>
+    <input path="ShowActionHandler.js"/>
+    <input path="HideActionHandler.js"/>
+    <input path="MotionActionHandler.js"/>
+    <input path="SlideInActionHandler.js"/>
+    <input path="SlideOutActionHandler.js"/>
+    <input path="ScaleActionHandler.js"/>
+    <input path="RotateActionHandler.js"/>
+    <input path="AnimationActionsGroup.js"/>
+    <input path="Action.js"/>
+    <input path="Interaction.js"/>
+  </output>
+</root>
