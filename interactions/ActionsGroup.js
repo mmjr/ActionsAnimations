@@ -18,7 +18,10 @@ ActionsGroup.prototype.addHandler = function (handler) {
 ActionsGroup.prototype.getDesc = function () {
     var groupDesc = { text: this.displayName, children: [] };
     for (var key in this.actionsHandlers) {
-        groupDesc.children.push({ text: this.actionsHandlers[key].displayName, id: this.id + '.' + this.actionsHandlers[key].id });
+        groupDesc.children.push({
+            text: this.actionsHandlers[key].displayName,
+            id: this.id + '.' + this.actionsHandlers[key].id
+        });
     }
     return groupDesc;
 };

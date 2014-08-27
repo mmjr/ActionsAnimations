@@ -1,7 +1,9 @@
 ﻿
 function GotoURLActionParams(binded) {
+    GotoURLActionParams.prototype.viewName = 'GoToURL';
     this.binded = binded;
     this.add('url', '');
+    this.add('delay', 0);
     this.add('target', 'newWindow');
     this.add('left', 0);
     this.add('top', 0);

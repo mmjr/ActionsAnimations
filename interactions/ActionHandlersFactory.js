@@ -8,7 +8,6 @@ var ActionHandlersFactory = new function () {
     }
 
     this.getActionHandler = function (actionId) {
-        debugger;
         var ids = actionId.split('.');
         return actionsGroups[ids[0]].getActionHandler(ids[1]);
     };

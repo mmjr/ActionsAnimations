@@ -2,6 +2,7 @@
     // parameters version
     this.version = version;
     // true if parameters are bindable
+    this.viewName = '';
     this.binded = false;
 
 }

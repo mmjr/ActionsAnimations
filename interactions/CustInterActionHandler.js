@@ -10,6 +10,8 @@ CustInterActionHandler.prototype = new ActionHandler();
 CustInterActionHandler.prototype.play = function (params, target) {
 
     if (params.validate()) {
-        $(window).trigger('customInteractionEvent', params.get('name'));
+        setTimeout(function (){
+            $(window).trigger('customInteractionEvent', params.get('name'))
+        }, params.get('delay'));
     }
 };

@@ -7,10 +7,12 @@
     <input path="ActionsGroup.js"/>    
     <input path="GotoURLActionParams.js"/>
     <input path="GotoURLActionHandler.js"/>
+    <input path="TriggerCTActionParams.js"/>
     <input path="TriggerCTActionHandler.js"/>
     <input path="CustInterActionParams.js"/>
     <input path="CustInterActionHandler.js"/>
     <input path="URLActionsGroup.js"/>
+    <input path="VideoActionParams.js"/>
     <input path="VideoPlayActionHandler.js"/>
     <input path="VideoStopActionHandler.js"/>
     <input path="VideoPauseActionHandler.js"/>

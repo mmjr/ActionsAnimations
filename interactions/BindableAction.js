@@ -11,13 +11,13 @@ function BindableAction() {
 
     // action handler
     this.actionHandler = ko.computed(function () {        
-        if (this.actionId()) {           
+        if (this.actionId() && this.actionParams) {
             var handler = ActionHandlersFactory.getActionHandler(this.actionId());
             this.displayName(handler.displayName);
             this.actionParams(handler.getParams(true));
             return handler;
         }
-        else {            
+        else if(this.actionParams){
             this.displayName('');           
             this.actionParams(null);           
             return null;

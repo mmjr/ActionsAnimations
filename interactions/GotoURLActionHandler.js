@@ -24,11 +24,15 @@ GotoURLActionHandler.prototype.play = function (params, target) {
                     height: params.get('height')
                 }
             };
-            EB._openWindowOrRedirect(options);
+            setTimeout(function (){
+                EB._openWindowOrRedirect(options);
+                if (params.get('closeAllAdParts')) {
+                    $(window).trigger('closeAllAdPartsEvent');
+                }
+            }, params.get('delay'));
 
-            if (params.get('closeAllAdParts')) {
-                $(window).trigger('closeAllAdPartsEvent');
-            }
+
+
 
 
         }
@@ -45,11 +49,17 @@ GotoURLActionHandler.prototype.play = function (params, target) {
                         ', height=' + params.get('height'));
 
                 if (params.get('closeAllAdParts')) {
-                    $(window).trigger('closeAllAdPartsEvent');
+                    setTimeout(function (){
+                        $(window).trigger('closeAllAdPartsEvent');
+                    }, params.get('delay'));
+
                 }
             }
             else{
-                window.open(Utils.fixURL(params.get('url')), '_top');
+                setTimeout(function (){
+                    window.open(Utils.fixURL(params.get('url')), '_top');
+                }, params.get('delay'));
+
             }
         }
     }

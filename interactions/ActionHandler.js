@@ -3,7 +3,7 @@ function ActionHandler() {
     this.id = null;
     this.displayName = null;
     this.param = null;
-    this.targtable = false;
+    this.targetable = false;
 }
 
 ActionHandler.prototype.init = function () {

@@ -121,12 +121,12 @@ BindableInteraction.prototype.updateActionTarget = function (oldId, newId, index
 };
 
 
-BindableInteraction.prototype.addAction = function(actionId, displayName, actionsParams, actionHandler, actionTarget){
+BindableInteraction.prototype.addAction = function(){
     var newAction = new BindableAction();
-    newAction.actionId(actionId);
-    newAction.displayName(displayName);
-    newAction.actionParams = actionsParams;
-    newAction.actionHandler = actionHandler;
-    newAction.actionTarget(actionTarget);
     this.actions.push(newAction);
+    return newAction;
+};
+
+BindableInteraction.prototype.removeAction = function(actionIndex){
+    this.actions.splice(actionIndex, 1);
 };

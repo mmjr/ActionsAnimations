@@ -1,5 +1,6 @@
 ﻿
 function MotionActionParams(binded) {
+    MotionActionParams.prototype.viewName = 'Motion';
     this.binded = binded;
     this.add('startX', 0);
     this.add('startY', 0);

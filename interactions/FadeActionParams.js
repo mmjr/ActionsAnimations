@@ -1,10 +1,11 @@
 ﻿
 function FadeActionParams(binded) {
+    FadeActionParams.prototype.viewName = 'Fade';
     this.binded = binded;
     this.add('duration', 1000);
-    this.add('delay', 0);
     this.add('ease','none');
     this.add('easePower', 1);
+    this.add('delay', 0);
 }
 
 FadeActionParams.prototype = new ActionParams('1.0.0');

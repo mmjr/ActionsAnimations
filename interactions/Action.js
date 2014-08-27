@@ -26,7 +26,7 @@ Action.prototype = (function () {
 
     // return the action target - added by uri.
     var getActionTarget = function(){
-        return this.actionTarget;
+        return  (this.getActionHandler() &&  this.getActionHandler().targetable ?  this.actionTarget : true);
     };
 
     // validate that this interaction initialized with the needed values

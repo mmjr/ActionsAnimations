@@ -39,7 +39,7 @@ Interaction.prototype = (function () {
 
     };
 
-    // this function is being called when the associated event trigered
+    // this function is being called when the associated event triggered
     var eventHandler = function (e) {
         Utils.stopPropagation(e);
         e.data.play();

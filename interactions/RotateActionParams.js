@@ -1,5 +1,6 @@
 ﻿
 function RotateActionParams(binded) {
+    RotateActionParams.prototype.viewName = 'Rotate';
     this.binded = binded;    
     this.add('degree', 1);
     this.add('direction', 1);

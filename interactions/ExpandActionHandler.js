@@ -9,5 +9,5 @@ function ExpandActionHandler() {
 ExpandActionHandler.prototype = new ActionHandler();
 
 ExpandActionHandler.prototype.play = function (params, target) {
-    $(window).trigger('expandEvent', target);
+    setTimeout(function (){$(window).trigger('expandEvent', target)}, params.get('delay'));
 };

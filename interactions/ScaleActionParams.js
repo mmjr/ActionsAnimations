@@ -1,5 +1,6 @@
 ﻿
 function ScaleActionParams(binded) {
+    ScaleActionParams.prototype.viewName = 'Scale';
     this.binded = binded;
     this.add('scale', 1);
     this.add('duration', 1000);
