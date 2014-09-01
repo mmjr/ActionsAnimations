@@ -8,6 +8,7 @@ function RotateActionParams(binded) {
     this.add('delay', 0);
     this.add('ease','none');
     this.add('easePower', 1);
+    this.add('loop',0);
 }
 
 RotateActionParams.prototype = new ActionParams('1.0.0');
@@ -18,6 +19,7 @@ RotateActionParams.prototype.validate = function () {
     var ease = this.get('ease');
     var easePower = this.get('easePower');    
     var degree = this.get('degree');
+    var loop = this.get('loop');
 
     return (this.get('duration') >= 0 &&
             this.get('delay') >= 0 &&
@@ -28,5 +30,5 @@ RotateActionParams.prototype.validate = function () {
             ease === 'easeOut' ||
             ease === 'easeInOut') &&
             easePower >= 1 &&
-            easePower <= 4);
+            easePower <= 4 && loop >= 0);
 };
